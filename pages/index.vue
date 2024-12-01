@@ -1,0 +1,3 @@
+<template>
+  <LoginView></LoginView>
+</template>
