@@ -1,0 +1,3 @@
+<template>
+  <CreatePostForm></CreatePostForm>
+</template>
