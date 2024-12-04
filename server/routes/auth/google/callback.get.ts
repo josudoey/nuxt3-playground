@@ -5,12 +5,12 @@ export default defineOAuthGoogleEventHandler({
       user: {
         name: user.name,
         email: user.email,
-        picture: user.picture,
-      },
-    });
-    return sendRedirect(event, "/");
+        picture: user.picture
+      }
+    })
+    await sendRedirect(event, '/')
   },
-  onError(event, error) {
-    return sendRedirect(event, "/");
-  },
-});
+  async onError(event, error) {
+    await sendRedirect(event, '/')
+  }
+})

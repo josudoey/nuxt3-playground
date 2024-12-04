@@ -1,16 +1,16 @@
-import redisDriver from "unstorage/drivers/redis";
+import redisDriver from 'unstorage/drivers/redis'
 
 export default defineNitroPlugin(() => {
-  const storage = useStorage();
+  const storage = useStorage()
 
   // Dynamically pass in credentials from runtime configuration, or other sources
   const driver = redisDriver({
-    base: "",
+    base: '',
     host: useRuntimeConfig().redis.host,
-    port: useRuntimeConfig().redis.port,
+    port: useRuntimeConfig().redis.port
     /* other redis connector options */
-  });
+  })
 
   // Mount driver
-  storage.mount("redis", driver);
-});
+  storage.mount('redis', driver)
+})
