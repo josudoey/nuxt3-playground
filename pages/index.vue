@@ -1,3 +1,5 @@
 <template>
-  <LoginView></LoginView>
+  <NuxtLayout>
+    <LoginView></LoginView>
+  </NuxtLayout>
 </template>
